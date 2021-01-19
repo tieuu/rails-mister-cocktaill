@@ -1,0 +1,28 @@
+<%= javascript_pack_tag 'custom' %>
+
+<div class="container">
+  <div class="logo">
+    <%= image_tag "mrcocktail.PNG", alt: "Mr Cocktail", width: 500 %>
+    <h1>Welcome to Mr. Cocktail!</h1>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <h2><%= link_to 'Add cocktail', new_cocktail_path, class: 'link' %></h2>
+</div>
+
+<div class="container" id="scroll">
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail), class:'link' do %>
+      <div id="glasses">
+        <%= image_tag "glass.PNG", alt: "empty glass", width: 200, id: 'glass' %>
+        <h2><%= cocktail.name %></h2>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<br>
+<div class="d-flex justify-content-center">
+  <p>Scroll for more <i class="fas fa-arrow-circle-right"></i> </p>
+</div>

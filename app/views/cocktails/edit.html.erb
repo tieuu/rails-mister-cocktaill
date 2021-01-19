@@ -1,0 +1,7 @@
+<h2><%= link_to "All cocktails", cocktails_path %></h2>
+<h1>Editing cocktail</h1>
+
+<%= render "form", cocktail: @cocktail %>
+<br>
+<%= link_to "👀 Show |", cocktail_path(@cocktail) %>
+<%= link_to "🌈 Back", cocktails_path %>

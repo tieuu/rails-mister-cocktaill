@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center" id="need-some-space">
+  <h2><%= link_to 'All cocktail', cocktails_path, class: 'link' %></h2>
+</div>
+
+<div class="d-flex justify-content-center">
+  <h1><%= @cocktail.name %></h1>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="icon">
+    <%= link_to edit_cocktail_path(@cocktail), class:'link', id:'edit' do %>
+      <i class="fas fa-highlighter"></i>
+    <% end %>
+  </div>
+  <div class="icon">
+    <%= link_to cocktail_path(@cocktail), method: :delete, data: { confirm: "Delete #{@cocktail.name.downcase}?" }, class:'link', id:'back' do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div>
+    <ul class="list-group">
+    <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item"><%= dose.ingredient.name %> <%= dose.description %>
+      <%= link_to dose_path(dose), method: :delete, data: { confirm: "Remove #{dose.ingredient.name.downcase}?" }, class:'link', id:'back' do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
+    </li>
+    <% end %>
+    <div id="need-some-space"></div>
+    <div class="d-flex justify-content-center"><%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class:'link' %></div>
+    </ul>
+  </div>
+  <div>
+    <%= image_tag "color1.PNG", alt: "cocktail", width: 400 %>
+  </div>
+</div>

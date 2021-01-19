@@ -1,0 +1,107 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background: #F5F4F0;
+  font-family: 'Nerko One', cursive;
+  font-size: 30px;
+}
+
+h1 {
+    padding-top: 40px;
+    font-family: 'Nerko One', cursive;
+    color: black;
+    font-size: 70px;
+  }
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'Nerko One', cursive;
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: #DEAA64;
+  }
+}
+
+#scroll {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  justify-content: unset;
+  margin: auto;
+  padding-top: 20px;
+  align-items: flex-start;
+}
+
+#special{
+  border-radius: 50%;
+}
+
+#cocktail_name {
+  border-radius: 10px;
+  background-color: #DEAA64;
+  border-color: black;
+  width: 250px;
+  border-width: 2px;
+  background-image: none;
+  color: black;
+  font-size: 25px;
+}
+
+.my-button {
+  font-size: 30px;
+  padding: 0;
+  &:hover {
+    color: #DEAA64;
+  }
+}
+
+#back {
+  &:hover {
+    color: #D96042;
+  }
+}
+
+.invalid-feedback {
+  color: #D96042;
+}
+
+#need-some-space {
+  padding-top: 40px;
+}
+
+.icon {
+  padding: 5px;
+  font-size: 25px;
+}
+
+.container-ingredients {
+  width: 200px;
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  align-items: center;
+}
+
+#edit {
+  &:hover {
+    color: #91BB44;
+  }
+}
+
+.list-group-item {
+  background-color:  #F5F4F0;
+  border: none;
+}
