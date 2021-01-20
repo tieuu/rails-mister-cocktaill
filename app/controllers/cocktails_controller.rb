@@ -3,6 +3,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @image = 'glass.PNG'
   end
 
   def show

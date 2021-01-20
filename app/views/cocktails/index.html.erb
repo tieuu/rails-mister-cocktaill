@@ -15,7 +15,7 @@
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail), class:'link' do %>
       <div id="glasses">
-        <%= image_tag "glass.PNG", alt: "empty glass", width: 200, id: 'glass' %>
+        <%= image_tag @image, alt: "empty glass", width: 200, id: 'glass' %>
         <h2><%= cocktail.name %></h2>
       </div>
     <% end %>
