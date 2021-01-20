@@ -1,5 +1,18 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.order(:name.downcase), prompt: "Choose an ingredient" %>
-  <%= f.submit "Submit dose", class: "btn btn-primary" %>
-<% end %>
+<div class="d-flex justify-content-center">
+  <h1>New dose</h1>
+</div>
+
+<div class="container">
+  <div>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: Ingredient.order(:name.downcase), prompt: "Choose an ingredient" %>
+    <%= f.submit "Submit dose", class: "my-button" %>
+    <%= link_to "or back", cocktails_path, class: 'link', id: 'back' %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= image_tag "#{@image}", alt: "Mr Cocktail thinking", width: 400 %>
+  </div>
+</div>

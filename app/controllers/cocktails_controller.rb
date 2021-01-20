@@ -5,7 +5,9 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-  def show; end
+  def show
+    @img = "color#{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sample}.PNG"
+  end
 
   def new
     @cocktail = Cocktail.new
@@ -22,7 +24,9 @@ class CocktailsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @image = 'name.PNG'
+  end
 
   def update
     @cocktail.update(cocktail_params)

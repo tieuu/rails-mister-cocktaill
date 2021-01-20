@@ -1,5 +1,6 @@
 class DosesController < ApplicationController
   def new
+    @image = 'name.PNG'
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new
   end
@@ -11,6 +12,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
+      @image = 'namee.PNG'
       render :new
     end
   end

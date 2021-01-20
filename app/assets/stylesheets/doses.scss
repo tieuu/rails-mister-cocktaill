@@ -1,3 +1,27 @@
 // Place all the styles related to the doses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+#dose_description, #dose_ingredient_id {
+  border-radius: 10px;
+  background-color: #DEAA64;
+  border-color: black;
+  width: 250px;
+  border-width: 2px;
+  background-image: none;
+  color: black;
+  font-size: 25px;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+.my-button {
+  background-color: #F5F4F0;
+  border: none;
+  font-size: 30px;
+  padding: 0;
+  &:hover {
+    color: #DEAA64;
+  }
+}
