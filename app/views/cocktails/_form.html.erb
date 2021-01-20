@@ -1,5 +1,6 @@
 <%= simple_form_for(cocktail) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit, "Add", class: "my-button" %>
   <%= link_to "or back", cocktails_path, class: 'link', id: 'back' %>
 <% end %>
