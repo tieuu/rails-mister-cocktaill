@@ -7,10 +7,10 @@
   glasses.forEach((item, i) => {
     item.addEventListener('mouseover', function(){
       const random_img = (img[Math.floor(Math.random() * img.length)]);
-      glass[i].src = `././assets/color${random_img}.PNG`;
+      glass[i].src = `/app/assets/color${random_img}.PNG`;
     })
     item.addEventListener('mouseout', function(){
-      glass[i].src = "././assets/glass.PNG";
+      glass[i].src = "/app/assets/glass.PNG";
     })
   });
 // }
