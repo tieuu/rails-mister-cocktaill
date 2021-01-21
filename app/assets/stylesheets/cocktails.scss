@@ -82,6 +82,10 @@ h2 {
   padding-top: 40px;
 }
 
+#need-some-more-space {
+  padding-bottom: 100px;
+}
+
 .icon {
   padding: 5px;
   font-size: 25px;
@@ -102,6 +106,25 @@ h2 {
 }
 
 .list-group-item {
-  background-color:  #F5F4F0;
+  background-color: #F5F4F0;
   border: none;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+  border-radius: 10px;
+  background-color: #DEAA64;
+  border-color: black;
+  width: 150px;
+  border-width: 2px;
+  background-image: none;
+  color: black;
+  font-size: 25px;
+  -webkit-appearance: none;
+}
+
+.containernew {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
 }

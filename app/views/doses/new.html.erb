@@ -6,7 +6,7 @@
   <div>
     <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
-    <%= f.association :ingredient, collection: Ingredient.order(:name.downcase), prompt: "Choose an ingredient" %>
+    <%= f.association :ingredient, collection: Ingredient.order(:name.downcase), prompt: "Choose an ingredient", input_html: { class: 'select2' } %>
     <%= f.submit "Submit dose", class: "my-button" %>
     <%= link_to "or back", cocktails_path, class: 'link', id: 'back' %>
     <% end %>
